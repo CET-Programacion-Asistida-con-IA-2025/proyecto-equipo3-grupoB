@@ -1,6 +1,7 @@
 ## Grupo B - Equipo 3
 _Curso de Programación Asistida con IA - Chicas en Tecnología_ 🚀
 
+hola chicas soy leilaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
 En este repositorio, se presenta el sitio web realizado durante el curso de programación frontend de CET.
 
 ### 📄 Entregas
