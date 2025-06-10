@@ -4,6 +4,7 @@ _Curso de Programación Asistida con IA - Chicas en Tecnología_ 🚀
 hola chicas soy leilaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
 hola soy maleeeeee
 aca sofi
+soy valen
 En este repositorio, se presenta el sitio web realizado durante el curso de programación frontend de CET.
 
 ### 📄 Entregas
