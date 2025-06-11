@@ -1,3 +1,5 @@
+## ACÁ AGREGAR EL NUEVO README
+
 ## Grupo B - Equipo 3
 _Curso de Programación Asistida con IA - Chicas en Tecnología_ 🚀
 
