@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aprendiendo Fácil</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🎓 Aprendiendo Fácil</h1>
+            <p class="subtitle">Tu camino hacia el conocimiento comienza aquí</p>
+        </header>
+
+        <!-- Sección Test Vocacional -->
+        <div class="section">
+            <h2>🔍 Test Vocacional</h2>
+            <p>Descubre tu vocación y encuentra el camino profesional perfecto para ti.</p>
+            <div class="test-container">
+                <div class="test-card" onclick="showTestAlert('Personalidad')">
+                    <div class="icon">🧠</div>
+                    <h3>Test de Personalidad</h3>
+                    <p>Conoce tus fortalezas y preferencias</p>
+                </div>
+                <div class="test-card" onclick="showTestAlert('Intereses')">
+                    <div class="icon">❤️</div>
+                    <h3>Test de Intereses</h3>
+                    <p>Explora qué te apasiona realmente</p>
+                </div>
+                <div class="test-card" onclick="showTestAlert('Habilidades')">
+                    <div class="icon">⚡</div>
+                    <h3>Test de Habilidades</h3>
+                    <p>Identifica tus talentos naturales</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Sección Links de Cursos -->
+        <div class="section">
+            <h2>🔗 Cursos Online Recomendados</h2>
+            <p>Accede a los mejores cursos online para impulsar tu carrera:</p>
+            
+            <a href="https://www.coursera.org" class="course-link" target="_blank">
+                📚 Coursera - Cursos Universitarios
+            </a>
+            
+            <a href="https://www.udemy.com" class="course-link" target="_blank">
+                💻 Udemy - Tecnología y Negocios
+            </a>
+            
+            <a href="https://www.edx.org" class="course-link" target="_blank">
+                🎓 edX - MIT, Harvard y más
+            </a>
+            
+            <a href="https://www.platzi.com" class="course-link" target="_blank">
+                🚀 Platzi - Tecnología en Español
+            </a>
+            
+            <a href="https://www.domestika.org" class="course-link" target="_blank">
+                🎨 Domestika - Creatividad y Diseño
+            </a>
+        </div>
+
+        <!-- Sección Introducción Didáctica -->
+        <div class="section">
+            <h2>📖 Introducción Didáctica a los Cursos</h2>
+            <p>Aprende de manera efectiva con nuestros métodos didácticos:</p>
+            
+            <div class="intro-grid">
+                <div class="intro-card">
+                    <div class="icon">🎯</div>
+                    <h3>Aprende por Objetivos</h3>
+                    <p>Define metas claras y alcanza resultados medibles en cada curso.</p>
+                </div>
+                
+                <div class="intro-card">
+                    <div class="icon">🧩</div>
+                    <h3>Metodología Práctica</h3>
+                    <p>Combina teoría con ejercicios prácticos para un aprendizaje efectivo.</p>
+                </div>
+                
+                <div class="intro-card">
+                    <div class="icon">👥</div>
+                    <h3>Comunidad de Aprendizaje</h3>
+                    <p>Conecta con otros estudiantes y mentores en tu área de interés.</p>
+                </div>
+                
+                <div class="intro-card">
+                    <div class="icon">📊</div>
+                    <h3>Seguimiento del Progreso</h3>
+                    <p>Monitorea tu avance y celebra cada logro en tu camino educativo.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Formulario de Contacto -->
+        <div class="section form-section">
+            <h2>💬 Déjanos tu Comentario</h2>
+            <p>Nos encantaría conocer tu opinión y sugerencias:</p>
+            
+            <div class="form-container">
+                <form id="commentForm">
+                    <div class="form-group">
+                        <label for="nombre">👤 Tu Nombre:</label>
+                        <input type="text" id="nombre" name="nombre" placeholder="Escribe tu nombre aquí" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="comentario">💭 Tu Comentario:</label>
+                        <textarea id="comentario" name="comentario" placeholder="Comparte tus ideas, sugerencias o experiencias..." required></textarea>
+                    </div>
+                    
+                    <button type="submit" class="submit-btn">
+                        ✉️ Enviar Comentario
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
