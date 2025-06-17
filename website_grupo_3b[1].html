@@ -3,209 +3,120 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aprendiendo Fácil - Plataforma Educativa para Adolescentes Argentinos</title>
-    <meta name="description" content="Plataforma web educativa para adolescentes argentinos con cursos virtuales gratuitos, test vocacional y sistema de favoritos">
+    <title>Aprendiendo Fácil</title>
     <link rel="stylesheet" href="styles[1].css">
 </head>
 <body>
     <div class="container">
         <header>
             <h1>🎓 Aprendiendo Fácil</h1>
-            <p class="subtitle">Plataforma educativa para adolescentes argentinos</p>
-            <p class="header-description">Tu camino hacia el conocimiento comienza aquí - Educación de calidad para todos</p>
+            <p class="subtitle">Tu camino hacia el conocimiento comienza aquí</p>
         </header>
 
-        <!-- Navegación por Categorías -->
-        <div class="section navigation-section">
-            <h2>🗂️ Navegación por Categorías</h2>
-            <p>Explora cursos organizados por áreas de interés:</p>
-            <div class="categories-container">
-                <div class="category-card" data-category="tecnologia">
-                    <div class="icon">💻</div>
-                    <h3>Tecnología</h3>
-                    <p>Programación, IA, Diseño Web</p>
-                </div>
-                <div class="category-card" data-category="creatividad">
-                    <div class="icon">🎨</div>
-                    <h3>Creatividad</h3>
-                    <p>Diseño, Fotografía, Arte</p>
-                </div>
-                <div class="category-card" data-category="negocios">
-                    <div class="icon">📊</div>
-                    <h3>Marketing y Negocios</h3>
-                    <p>Emprendimiento, Marketing Digital</p>
-                </div>
-                <div class="category-card" data-category="academico">
-                    <div class="icon">📚</div>
-                    <h3>Académico</h3>
-                    <p>Matemáticas, Ciencias, Idiomas</p>
-                </div>
-                <div class="category-card" data-category="habilidades">
-                    <div class="icon">🧠</div>
-                    <h3>Habilidades Blandas</h3>
-                    <p>Comunicación, Liderazgo</p>
-                </div>
-            </div>
-        </div>
-
-        <!-- Sección Test Vocacional Interactivo -->
+        <!-- Sección Test Vocacional -->
         <div class="section">
-            <h2>🔍 Test Vocacional Interactivo</h2>
-            <p>Descubre tu vocación y recibe recomendaciones personalizadas de cursos y áreas de estudio:</p>
-            
-            <div id="test-intro" class="test-intro">
-                <div class="test-container">
-                    <div class="test-card" onclick="startVocationalTest()">
-                        <div class="icon">🧠</div>
-                        <h3>Iniciar Test Vocacional</h3>
-                        <p>Responde 10 preguntas y descubre tu camino ideal</p>
-                    </div>
+            <h2>🔍 Test Vocacional</h2>
+            <p>Descubre tu vocación y encuentra el camino profesional perfecto para ti.</p>
+            <div class="test-container">
+                <div class="test-card" onclick="showTestAlert('Personalidad')">
+                    <div class="icon">🧠</div>
+                    <h3>Test de Personalidad</h3>
+                    <p>Conoce tus fortalezas y preferencias</p>
                 </div>
-            </div>
-
-            <div id="test-questions" class="test-questions" style="display: none;">
-                <div class="question-container">
-                    <div class="progress-bar">
-                        <div class="progress-fill" id="progressFill"></div>
-                    </div>
-                    <div class="question-counter">
-                        <span>Pregunta <span id="currentQuestion">1</span> de <span id="totalQuestions">10</span></span>
-                    </div>
-                    <div class="question-text" id="questionText"></div>
-                    <div class="answers-container" id="answersContainer"></div>
-                    <div class="test-navigation">
-                        <button id="prevBtn" onclick="previousQuestion()" style="display: none;">⬅️ Anterior</button>
-                        <button id="nextBtn" onclick="nextQuestion()">Siguiente ➡️</button>
-                    </div>
+                <div class="test-card" onclick="showTestAlert('Intereses')">
+                    <div class="icon">❤️</div>
+                    <h3>Test de Intereses</h3>
+                    <p>Explora qué te apasiona realmente</p>
                 </div>
-            </div>
-
-            <div id="test-results" class="test-results" style="display: none;">
-                <h3>🎉 ¡Resultados de tu Test Vocacional!</h3>
-                <div id="resultsContent"></div>
-                <button onclick="restartTest()" class="restart-btn">🔄 Hacer Test Nuevamente</button>
+                <div class="test-card" onclick="showTestAlert('Habilidades')">
+                    <div class="icon">⚡</div>
+                    <h3>Test de Habilidades</h3>
+                    <p>Identifica tus talentos naturales</p>
+                </div>
             </div>
         </div>
 
-        <!-- Sección Cursos por Categoría -->
+        <!-- Sección Links de Cursos -->
         <div class="section">
             <h2>🔗 Cursos Online Recomendados</h2>
-            <p>Accede a los mejores cursos online gratuitos para impulsar tu futuro:</p>
+            <p>Accede a los mejores cursos online para impulsar tu carrera:</p>
             
-            <div class="courses-filter">
-                <button class="filter-btn active" data-filter="all">Todos</button>
-                <button class="filter-btn" data-filter="tecnologia">Tecnología</button>
-                <button class="filter-btn" data-filter="creatividad">Creatividad</button>
-                <button class="filter-btn" data-filter="negocios">Negocios</button>
-                <button class="filter-btn" data-filter="academico">Académico</button>
-            </div>
-
-            <div class="courses-grid" id="coursesGrid">
-                <!-- Los cursos se generarán dinámicamente con JavaScript -->
-            </div>
-        </div>
-
-        <!-- Sistema de Favoritos -->
-        <div class="section">
-            <h2>⭐ Mis Cursos Favoritos</h2>
-            <p>Aquí encontrarás todos los cursos que has guardado como favoritos:</p>
-            <div id="favoritesContainer" class="favorites-container">
-                <div class="empty-favorites">
-                    <div class="icon">📝</div>
-                    <h3>Aún no tienes favoritos</h3>
-                    <p>Comienza a explorar cursos y guarda los que más te interesen usando el botón ⭐</p>
-                </div>
-            </div>
+            <a href="https://www.coursera.org" class="course-link" target="_blank">
+                📚 Coursera - Cursos Universitarios
+            </a>
+            
+            <a href="https://www.udemy.com" class="course-link" target="_blank">
+                💻 Udemy - Tecnología y Negocios
+            </a>
+            
+            <a href="https://www.edx.org" class="course-link" target="_blank">
+                🎓 edX - MIT, Harvard y más
+            </a>
+            
+            <a href="https://www.platzi.com" class="course-link" target="_blank">
+                🚀 Platzi - Tecnología en Español
+            </a>
+            
+            <a href="https://www.domestika.org" class="course-link" target="_blank">
+                🎨 Domestika - Creatividad y Diseño
+            </a>
         </div>
 
         <!-- Sección Introducción Didáctica -->
         <div class="section">
-            <h2>📖 Metodología de Aprendizaje</h2>
-            <p>Aprende de manera efectiva con nuestros métodos didácticos probados:</p>
+            <h2>📖 Introducción Didáctica a los Cursos</h2>
+            <p>Aprende de manera efectiva con nuestros métodos didácticos:</p>
             
             <div class="intro-grid">
                 <div class="intro-card">
                     <div class="icon">🎯</div>
-                    <h3>Objetivos Claros</h3>
-                    <p>Define metas específicas y alcanza resultados medibles en cada curso que tomes.</p>
+                    <h3>Aprende por Objetivos</h3>
+                    <p>Define metas claras y alcanza resultados medibles en cada curso.</p>
                 </div>
                 
                 <div class="intro-card">
                     <div class="icon">🧩</div>
-                    <h3>Aprendizaje Práctico</h3>
-                    <p>Combina teoría con proyectos reales para un aprendizaje más efectivo y duradero.</p>
+                    <h3>Metodología Práctica</h3>
+                    <p>Combina teoría con ejercicios prácticos para un aprendizaje efectivo.</p>
                 </div>
                 
                 <div class="intro-card">
                     <div class="icon">👥</div>
-                    <h3>Comunidad Argentina</h3>
-                    <p>Conecta con otros estudiantes argentinos y mentores en tu área de interés.</p>
+                    <h3>Comunidad de Aprendizaje</h3>
+                    <p>Conecta con otros estudiantes y mentores en tu área de interés.</p>
                 </div>
                 
                 <div class="intro-card">
                     <div class="icon">📊</div>
-                    <h3>Seguimiento Personal</h3>
-                    <p>Monitorea tu progreso y celebra cada logro en tu camino educativo.</p>
+                    <h3>Seguimiento del Progreso</h3>
+                    <p>Monitorea tu avance y celebra cada logro en tu camino educativo.</p>
                 </div>
             </div>
         </div>
 
-        <!-- Sistema de Comentarios Interactivo -->
+        <!-- Formulario de Contacto -->
         <div class="section form-section">
-            <h2>💬 Comunidad de Aprendizaje</h2>
-            <p>Comparte tu experiencia, haz preguntas y conecta con otros estudiantes:</p>
+            <h2>💬 Déjanos tu Comentario</h2>
+            <p>Nos encantaría conocer tu opinión y sugerencias:</p>
             
-            <!-- Formulario para nuevos comentarios -->
             <div class="form-container">
                 <form id="commentForm">
                     <div class="form-group">
                         <label for="nombre">👤 Tu Nombre:</label>
-                        <input type="text" id="nombre" name="nombre" placeholder="¿Cómo te llamas?" required>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="curso">📚 Curso de Interés (opcional):</label>
-                        <select id="curso" name="curso">
-                            <option value="">Selecciona un área</option>
-                            <option value="tecnologia">Tecnología</option>
-                            <option value="creatividad">Creatividad y Diseño</option>
-                            <option value="negocios">Marketing y Negocios</option>
-                            <option value="academico">Académico</option>
-                            <option value="habilidades">Habilidades Blandas</option>
-                        </select>
+                        <input type="text" id="nombre" name="nombre" placeholder="Escribe tu nombre aquí" required>
                     </div>
                     
                     <div class="form-group">
                         <label for="comentario">💭 Tu Comentario:</label>
-                        <textarea id="comentario" name="comentario" placeholder="Comparte tu experiencia, haz una pregunta o deja una sugerencia..." required></textarea>
+                        <textarea id="comentario" name="comentario" placeholder="Comparte tus ideas, sugerencias o experiencias..." required></textarea>
                     </div>
                     
                     <button type="submit" class="submit-btn">
-                        ✉️ Publicar Comentario
+                        ✉️ Enviar Comentario
                     </button>
                 </form>
             </div>
-
-            <!-- Sección de comentarios existentes -->
-            <div class="comments-section">
-                <h3>💬 Comentarios de la Comunidad</h3>
-                <div id="commentsContainer" class="comments-container">
-                    <!-- Los comentarios se cargarán dinámicamente -->
-                </div>
-            </div>
         </div>
-
-        <!-- Footer -->
-        <footer class="footer">
-            <div class="footer-content">
-                <h3>🎓 Aprendiendo Fácil</h3>
-                <p>Promoviendo el acceso equitativo a la educación de calidad para adolescentes argentinos</p>
-                <div class="footer-info">
-                    <p>🌍 Contribuyendo al ODS N.º 4 - Educación de Calidad</p>
-                    <p>🇦🇷 Hecho con ❤️ para Argentina</p>
-                </div>
-            </div>
-        </footer>
     </div>
 
     <script src="Java.js"></script>
