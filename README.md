@@ -1,37 +1,63 @@
-## Grupo B - Equipo 3
-_Curso de Programación Asistida con IA - Chicas en Tecnología_ 🚀
+# Plataforma Web Educativa para Adolescentes Argentinos
 
-hola chicas soy leilaaaaaaaaaaaaaaaaaaaaaaaaaaaaa holaaa leila me ves?
-hola soy maleeeeee
-aca sofi
-soy valen 
-En este repositorio, se presenta el sitio web realizado durante el curso de programación frontend de CET.
+## Problema Identificado
 
-### 📄 Entregas
-**Entrega #1**: planificación de la solución y primeros resultados que obtengamos con la IA:
+En Argentina, existe una **falta de difusión adecuada de cursos virtuales gratuitos destinados a adolescentes**. Aunque hay una oferta creciente de propuestas educativas online, muchas de ellas no llegan de manera efectiva a los jóvenes del nivel secundario. 
 
-📝 Edición del Archivo README incluyendo:
-- Definición de la problemática que eligieron abordar
-- Relación con los *Objetivos de Desarrollo Sostenible (ODS)*[^1]
-- Explicación de la solución tecnológica que están desarrollando
-> [!TIP]
-> Aprovechen los [formatos del README](https://docs.github.com/es/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax) para escribir diferentes secciones
+Esta situación presenta las siguientes limitaciones:
 
-🎨 Moodboard
+- Restringe las posibilidades de **acceder a herramientas de aprendizaje complementarias**
+- Limita el desarrollo personal, académico y profesional de los estudiantes
+- Afecta especialmente a estudiantes con menor acceso a recursos o información actualizada
+- Reduce las opciones de formación extracurricular disponibles
 
-🧩 Archivos generados con asistencia de IA: ```index.html```, ```style.css```, ```script.js```
+El problema se observa a nivel nacional, impactando de manera significativa en las oportunidades educativas de los jóvenes argentinos.
 
+## Público Objetivo
 
-**Entrega #2 (Final)**: se esperan modificaciones en el código respecto a la entrega anterior, que pueden incluir nuevos archivos o extensión de los existentes (debe haber al menos un archivo de cada lenguaje visto - HTML, CSS y Javascript)
+El proyecto está dirigido a **adolescentes argentinos que cursan el nivel secundario**, específicamente aquellos que:
 
-💡 Es una buena idea llevar un registro de lo que cambiamos. Por ejemplo
-```
-- Agregamos Bootstrap para el carrousel de imágenes...
-- Modificamos el texto de la sección de bienvenida...
-- Transformamos los textos sobre redes sociales en links...
-```
+- Están interesados en aprovechar su tiempo libre de manera productiva
+- Buscan aprender nuevas habilidades o explorar áreas de interés personal
+- Necesitan orientación sobre su futuro académico o laboral
+- Desean formarse en temas útiles para el ingreso a la universidad o al mundo del trabajo
 
-Ahora si, ¡A programar! 🚀
+Los usuarios principales serán chicos y chicas en edad escolar secundaria que buscan complementar su educación formal con oportunidades de aprendizaje adicionales.
 
+## Solución Propuesta
 
-[^1]: Los Objetivos de Desarrollo Sostenible u Objetivos Globales, también conocidos como Agenda 2030, son 17 objetivos globales interconectados diseñados para ser un «plan para lograr un futuro mejor y más sostenible para todos». Más información en https://www.un.org/sustainabledevelopment/es/objetivos-de-desarrollo-sostenible/
+Como respuesta a esta problemática, se propone el desarrollo de una **plataforma web educativa** orientada a la **recomendación, difusión y organización sistemática de cursos virtuales gratuitos**, utilizando html, css y javascript. 
+
+### Características principales:
+
+- **Interfaz accesible, intuitiva y centrada en el usuario**
+- Garantía de una experiencia de navegación inclusiva y eficiente
+- Alineación con el **Objetivo de Desarrollo Sostenible N.º 4** de las Naciones Unidas (Educación de calidad)
+- Promoción del **acceso equitativo a oportunidades de aprendizaje continuo**
+- Enfoque inclusivo sin importar el contexto socioeconómico del usuario
+
+## Funcionalidades Clave
+
+### 1. Test Vocacional Interactivo
+Permitirá al usuario identificar sus intereses y habilidades para recibir recomendaciones personalizadas de áreas de estudio o cursos específicos.
+
+### 2. Navegación Accesible y Organizada
+Los contenidos estarán estructurados en categorías temáticas claras, facilitando la exploración y el acceso a información relevante de manera intuitiva.
+
+### 3. Sistema de Favoritos
+Los usuarios podrán:
+- Guardar cursos de su interés
+- Crear una lista de seguimiento personalizada
+- Consultar contenidos guardados posteriormente
+- Continuar su investigación de manera organizada
+
+### 4. Sistema de Comentarios Interactivo
+Cada publicación incluirá un espacio dedicado para que los usuarios puedan:
+- Dejar sus opiniones y experiencias
+- Realizar consultas específicas
+- Fomentar la participación activa
+- Promover el intercambio de conocimientos entre pares
+
+---
+
+*Este proyecto busca democratizar el acceso a la educación complementaria, creando un puente entre la oferta educativa gratuita disponible y los jóvenes argentinos que pueden beneficiarse de ella.*
