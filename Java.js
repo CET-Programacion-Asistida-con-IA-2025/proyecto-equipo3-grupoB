@@ -1,6 +1,6 @@
 // Función para mostrar alertas de los tests
 function showTestAlert(testType) {
-    alert(¡Test de ${testType} próximamente!);
+    alert(`¡Test de ${testType} próximamente!`);
 }
 
 // Manejo del formulario de comentarios
@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', function() {
             const comentario = document.getElementById('comentario').value;
 
             if (nombre && comentario) {
-                alert(¡Gracias ${nombre}! Tu comentario ha sido enviado:\n\n"${comentario}"\n\nNos pondremos en contacto contigo pronto.);
+                alert(`¡Gracias ${nombre}! Tu comentario ha sido enviado:\n\n"${comentario}"\n\nNos pondremos en contacto contigo pronto.`);
 
                 // Limpiar el formulario
                 this.reset();
