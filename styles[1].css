@@ -459,8 +459,15 @@ textarea {
   margin-top: var(--spacing-xxl);
   position: relative;
   overflow: hidden;
+   width: 100vw;
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
 }
-
+.footer .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(--spacing-md);
+}
 .footer::before {
   content: '';
   position: absolute;
