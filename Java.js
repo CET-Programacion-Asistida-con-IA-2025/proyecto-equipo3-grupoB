@@ -86,3 +86,29 @@ function addHoverEffects() {
 
 // Llamar a efectos adicionales cuando el documento esté listo
 document.addEventListener('DOMContentLoaded', addHoverEffects);
+
+function performSearch() {
+    const searchInput = document.getElementById('searchInput');
+    const searchTerm = searchInput.value.trim();
+    
+    if (searchTerm === '') {
+        alert('💡 Escribe algo para buscar cursos');
+        return;
+    }
+    
+    alert(`🔍 Buscando: "${searchTerm}"\n\n📚 Encontramos cursos relacionados!`);
+}
+
+document.getElementById('searchInput').addEventListener('keypress', function(e) {
+    if (e.key === 'Enter') {
+        performSearch();
+    }
+});
+
+document.getElementById('searchInput').addEventListener('focus', function() {
+    this.parentElement.style.transform = 'translateY(-1px)';
+});
+
+document.getElementById('searchInput').addEventListener('blur', function() {
+    this.parentElement.style.transform = 'translateY(0)';
+});
