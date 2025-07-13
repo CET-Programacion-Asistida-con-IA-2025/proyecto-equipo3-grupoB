@@ -16,9 +16,9 @@
   --color-gray-dark: #343A40;
   
   /* Tipografía */
-  --font-primary: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  --font-secondary: 'Poppins', Arial, sans-serif;
-  --font-display: 'Montserrat', sans-serif;
+--font-primary: 'Avenir', 'Avenir Next', sans-serif;
+--font-secondary: 'Avenir', 'Avenir Next', sans-serif;
+--font-display: 'Avenir', 'Avenir Next', sans-serif;
   
   /* Espaciado */
   --spacing-xs: 0.5rem;
