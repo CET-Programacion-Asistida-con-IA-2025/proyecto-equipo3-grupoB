@@ -131,7 +131,65 @@ header h1 {
   position: relative;
   z-index: 2;
 }
+/* Hero Banner Azul */
+.hero {
+    background: linear-gradient(to right, #5a8dee, #6a82fb);
+    padding: 50px 30px;
+    border-radius: 25px;
+    color: white;
+    margin: 40px auto;
+    max-width: 90%;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    overflow: hidden; /* necesario para que no se salga */
+}
+.hero h1 {
+    color: white;
+}
+.hero h1 {
+    font-size: 2.8rem;
+    margin-bottom: 10px;
+}
+.hero .subtitle {
+    font-size: 1.3rem;
+    margin: 0;
+}
+/* Partículas flotantes */
+.hero::before,
+.hero::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-image: radial-gradient(white 1px, transparent 1px);
+    background-size: 30px 30px;
+    opacity: 0.2;
+    animation: float 20s linear infinite;
+    z-index: 0;
+}
 
+.hero::after {
+    background-size: 40px 40px;
+    animation-duration: 25s;
+    opacity: 0.15;
+}
+
+@keyframes float {
+    0% {
+        background-position: 0 0;
+    }
+    100% {
+        background-position: 100px 100px;
+    }
+}
+
+/* Asegurarse de que el contenido esté encima del efecto */
+.hero * {
+    position: relative;
+    z-index: 1;
+}
 /* === SECCIONES === */
 .section {
   background: var(--color-white);
