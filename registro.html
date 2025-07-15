@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aprendiendo Fácil</title>
+    <link rel="stylesheet" href="styles[1].css">
+</head>
+<body>
+<!-- Header superior estilo Coursera -->
+<header class="header">
+    <a href="index.html" class="logo">🎓 Aprendiendo Fácil</a>
+    
+    <div class="search-container">
+        <div class="search-wrapper">
+            <input 
+                type="text" 
+                class="search-input" 
+                placeholder="¿Qué deseas aprender?"
+                id="searchInput"
+            >
+            <span class="search-icon">🔍</span>
+        </div>
+    </div>
+    
+<nav class="nav-links">
+    <a href="cursos.html" class="nav-link">Cursos</a>
+    <a href="test-vocacional.html" class="nav-link">Test Vocacional</a>
+    <a href="blog.html" class="nav-link">Blog</a>
+    <a href="registro.html" class="nav-btn">Únete gratis</a>
+</nav>
+</header>
+    <div class="container">
+        <!-- Formulario de Contacto -->
+        <div class="section form-section">
+            <h2>💬 Déjanos tu Comentario</h2>
+            <p>Nos encantaría conocer tu opinión y sugerencias:</p>
+            
+            <div class="form-container">
+                <form id="commentForm" onsubmit="return validateForm(document.getElementById('nombre').value, document.getElementById('comentario').value)">
+                    <div class="form-group">
+                        <label for="nombre">👤 Tu Nombre:</label>
+                        <input type="text" id="nombre" name="nombre" placeholder="Escribe tu nombre aquí">
+                    </div>
+                            <div class="form-group">
+                        <label for="comentario">💭 Tu Comentario:</label>
+                        <textarea id="comentario" name="comentario" placeholder="Comparte tus ideas, sugerencias o experiencias..."></textarea>
+                    </div>
+                    
+                    <button type="submit" class="submit-btn">
+                        ✉️ Enviar Comentario
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="Java.js"></script>
+    <!-- Footer -->
+<footer class="footer">
+<div class="container">
+        <div class="footer-content">
+            <div class="footer-legend">
+                ✨ Busca, aprende y desarrolla ✨
+            </div>
+            
+            <div class="creators-section">
+                <h3 class="creators-title">👩‍💻 Equipo Creador</h3>
+                <div class="creators-grid">
+                    <div class="creator-card">
+                        <div class="creator-name">Delfina Lujan Moschella</div>
+                        <div class="creator-role">Estudiante Ingenieria Informatica</div>
+                        <div class="creator-info">moschelladelfina@gmail.com</div>
+                    </div>
+                    
+                    <div class="creator-card">
+                        <div class="creator-name">Leila Torrez</div>
+                        <div class="creator-role">Estudiante de Administración de Empresas</div>
+                        <div class="creator-info">leilatorrezw@gmail.com</div>
+                    </div>
+                    
+                    <div class="creator-card">
+                        <div class="creator-name">Malena canteros</div>
+                        <div class="creator-role">Estudiante Ingenieria Informatica</div>
+                        <div class="creator-info">canterosmalena@gmail.com</div>
+                    </div>
+                    
+                    <div class="creator-card">
+                        <div class="creator-name">Martina Magali Servente</div>
+                        <div class="creator-role">Diseñadora Grafica</div>
+                        <div class="creator-info">martiservente@gmail.com</div>
+                    </div>
+                    
+                    <div class="creator-card">
+                        <div class="creator-name">Sofía Agostina García</div>
+                        <div class="creator-role">Estudiante de Psicopedagogía</div>
+                        <div class="creator-info">sofiaagostinag21@gmail.com</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer-closure">
+  <div class="footer-closure-text">
+    🌟 Gracias por visitarnos - Tu viaje de aprendizaje comienza aquí 🌟
+  </div>
+  <div class="footer-year">
+    © 2025 Aprendiendo Fácil
+  </div>
+</div>
+</footer>
+</body>
+</html>

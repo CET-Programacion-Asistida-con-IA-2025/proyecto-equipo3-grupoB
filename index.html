@@ -9,7 +9,7 @@
 <body>
 <!-- Header superior estilo Coursera -->
 <header class="header">
-    <a href="#" class="logo">🎓 Aprendiendo Fácil</a>
+    <a href="index.html" class="logo">🎓 Aprendiendo Fácil</a>
     
     <div class="search-container">
         <div class="search-wrapper">
@@ -35,6 +35,41 @@
             <h1>🎓 Aprendiendo Fácil</h1>
             <p class="subtitle">Tu camino hacia el conocimiento comienza aquí</p>
         </section>
+
+
+    <!-- Sección de Registro por Edad -->
+    <section class="age-registration">
+        <h2 class="registration-title">¡Hola!</h2>
+        <p class="registration-subtitle">Para brindarte la mejor experiencia personalizada</p>
+        
+        <div class="registration-container">
+            <div class="registration-form">
+                <h3>¿Cuántos años tenés?</h3>
+                <p class="form-description">Esto nos ayudará a recomendarte los cursos más adecuados para vos</p>
+                
+                <div class="age-options">
+                    <button class="age-option" onclick="registerAge('menor15')" id="option1">
+                        <span class="option-icon">🎒</span>
+                        <span class="option-text">Menos de 15 años</span>
+                        <span class="option-subtitle">Cursos básicos y orientación escolar</span>
+                    </button>
+                    
+                    <button class="age-option" onclick="registerAge('mayor15')" id="option2">
+                        <span class="option-icon">🎓</span>
+                        <span class="option-text">15 años o más</span>
+                        <span class="option-subtitle">Cursos avanzados y orientación profesional</span>
+                    </button>
+                </div>
+
+                <div class="confirmation-message" id="confirmationMessage">
+                    <h4 id="confirmationTitle">¡Perfecto!</h4>
+                    <p id="confirmationText">Tu preferencia ha sido guardada exitosamente.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
     <!-- Sección de Bienvenida con Videos -->
     <section class="intro-videos">
         <h1 class="video-title">🎥 Comenzá tu recorrido</h1>
@@ -48,31 +83,7 @@
             </div>
         </div>
     </section>
-
-    <div class="container">
-        <!-- Sección Test Vocacional -->
-        <div class="section">
-            <h2>🔍 Test Vocacional</h2>
-            <p>Descubre tu vocación y encuentra el camino profesional perfecto para ti.</p>
-            <div class="test-container">
-                <div class="test-card" onclick="showTestAlert('Personalidad')">
-                    <div class="icon">🧠</div>
-                    <h3>Test de Personalidad</h3>
-                    <p>Conoce tus fortalezas y preferencias</p>
-                </div>
-                <div class="test-card" onclick="showTestAlert('Intereses')">
-                    <div class="icon">❤️</div>
-                    <h3>Test de Intereses</h3>
-                    <p>Explora qué te apasiona realmente</p>
-                </div>
-                <div class="test-card" onclick="showTestAlert('Habilidades')">
-                    <div class="icon">⚡</div>
-                    <h3>Test de Habilidades</h3>
-                    <p>Identifica tus talentos naturales</p>
-                </div>
-            </div>
-        </div>
-
+    
         <!-- Sección Links de Cursos -->
         <div class="section">
             <h2>🔗 Cursos Online Recomendados</h2>
@@ -130,6 +141,29 @@
                 </div>
             </div>
         </div>
+    <div class="container">
+        <!-- Sección Test Vocacional -->
+        <div class="section">
+            <h2>🔍 Test Vocacional</h2>
+            <p>Descubre tu vocación y encuentra el camino profesional perfecto para ti.</p>
+            <div class="test-container">
+                <div class="test-card" onclick="window.open('https://quevasaestudiar.com/test-vocacional/', '_blank')">
+                    <div class="icon">🧠</div>
+                    <h3>Test de Personalidad</h3>
+                    <p>Conoce tus fortalezas y preferencias</p>
+                </div>
+                <div class="test-card" onclick="window.open('https://quevasaestudiar.com/test-vocacional/', '_blank')">
+                    <div class="icon">❤️</div>
+                    <h3>Test de Intereses</h3>
+                    <p>Explora qué te apasiona realmente</p>
+                </div>
+                <div class="test-card" onclick="window.open('https://quevasaestudiar.com/test-vocacional/', '_blank')">
+                    <div class="icon">⚡</div>
+                    <h3>Test de Habilidades</h3>
+                    <p>Identifica tus talentos naturales</p>
+                </div>
+            </div>
+        </div>
 
         <!-- Formulario de Contacto -->
         <div class="section form-section">
@@ -168,33 +202,33 @@
                 <h3 class="creators-title">👩‍💻 Equipo Creador</h3>
                 <div class="creators-grid">
                     <div class="creator-card">
-                        <div class="creator-name">Nombre Creadora 1</div>
-                        <div class="creator-role">Rol/Especialidad</div>
-                        <div class="creator-info">Información adicional, contacto o descripción breve</div>
+                        <div class="creator-name">Delfina Lujan Moschella</div>
+                        <div class="creator-role">Estudiante Ingenieria Informatica</div>
+                        <div class="creator-info">moschelladelfina@gmail.com</div>
                     </div>
                     
                     <div class="creator-card">
-                        <div class="creator-name">Nombre Creadora 2</div>
-                        <div class="creator-role">Rol/Especialidad</div>
-                        <div class="creator-info">Información adicional, contacto o descripción breve</div>
+                        <div class="creator-name">Leila Torrez</div>
+                        <div class="creator-role">Estudiante de Administración de Empresas</div>
+                        <div class="creator-info">leilatorrezw@gmail.com</div>
                     </div>
                     
                     <div class="creator-card">
-                        <div class="creator-name">Nombre Creadora 3</div>
-                        <div class="creator-role">Rol/Especialidad</div>
-                        <div class="creator-info">Información adicional, contacto o descripción breve</div>
+                        <div class="creator-name">Malena canteros</div>
+                        <div class="creator-role">Estudiante Ingenieria Informatica</div>
+                        <div class="creator-info">canterosmalena@gmail.com</div>
                     </div>
                     
                     <div class="creator-card">
-                        <div class="creator-name">Nombre Creadora 4</div>
-                        <div class="creator-role">Rol/Especialidad</div>
-                        <div class="creator-info">Información adicional, contacto o descripción breve</div>
+                        <div class="creator-name">Martina Magali Servente</div>
+                        <div class="creator-role">Diseñadora Grafica</div>
+                        <div class="creator-info">martiservente@gmail.com</div>
                     </div>
                     
                     <div class="creator-card">
-                        <div class="creator-name">Nombre Creadora 5</div>
-                        <div class="creator-role">Rol/Especialidad</div>
-                        <div class="creator-info">Información adicional, contacto o descripción breve</div>
+                        <div class="creator-name">Sofía Agostina García</div>
+                        <div class="creator-role">Estudiante de Psicopedagogía</div>
+                        <div class="creator-info">sofiaagostinag21@gmail.com</div>
                     </div>
                 </div>
             </div>

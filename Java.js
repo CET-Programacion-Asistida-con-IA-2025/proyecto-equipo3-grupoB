@@ -112,3 +112,113 @@ document.getElementById('searchInput').addEventListener('focus', function() {
 document.getElementById('searchInput').addEventListener('blur', function() {
     this.parentElement.style.transform = 'translateY(0)';
 });
+// Para la edad //
+// Variable para controlar si ya se hizo la selección
+        let ageSelected = false;
+        let selectedAge = null;
+
+        // Verificar si hay una selección guardada al cargar la página
+        window.addEventListener('DOMContentLoaded', function() {
+            const savedAge = getSavedAge();
+            if (savedAge) {
+                restoreSelection(savedAge);
+            }
+        });
+
+        function registerAge(ageGroup) {
+            // Marcar como seleccionado
+            ageSelected = true;
+            selectedAge = ageGroup;
+            
+            // Mostrar alerta inmediatamente
+            let alertMessage = '';
+            if (ageGroup === 'menor15') {
+                alertMessage = '¡Genial! 🎒\nHemos personalizado tu experiencia para estudiantes jóvenes';
+            } else {
+                alertMessage = '¡Excelente! 🎓\nTu experiencia está optimizada para estudiantes avanzados y profesionales';
+            }
+            alert(alertMessage);
+            
+            // Guardar la selección
+            saveAge(ageGroup);
+            
+            // Actualizar la interfaz
+            updateInterface(ageGroup);
+            
+            // Mostrar mensaje de confirmación
+            showConfirmation(ageGroup);
+            
+            console.log(`Usuario registrado con edad: ${ageGroup}`);
+        }
+
+        function updateInterface(selectedAgeGroup) {
+            const option1 = document.getElementById('option1');
+            const option2 = document.getElementById('option2');
+            
+            // Remover selección previa
+            option1.classList.remove('selected');
+            option2.classList.remove('selected');
+            
+            // Agregar selección actual
+            if (selectedAgeGroup === 'menor15') {
+                option1.classList.add('selected');
+            } else {
+                option2.classList.add('selected');
+            }
+        }
+
+        function showConfirmation(ageGroup) {
+            const confirmationMessage = document.getElementById('confirmationMessage');
+            const confirmationTitle = document.getElementById('confirmationTitle');
+            const confirmationText = document.getElementById('confirmationText');
+            
+            let message = '';
+            if (ageGroup === 'menor15') {
+                confirmationTitle.textContent = '¡Genial! 🎒';
+                confirmationText.textContent = 'Hemos personalizado tu experiencia para estudiantes jóvenes';
+            } else {
+                confirmationTitle.textContent = '¡Excelente! 🎓';
+                confirmationText.textContent = 'Tu experiencia está optimizada para estudiantes avanzados y profesionales';
+            }
+            
+            confirmationMessage.classList.add('show');
+        }
+
+        // Funciones para guardar y recuperar la selección
+        function saveAge(ageGroup) {
+            // Guardar en una variable global o simular guardado
+            window.userAge = ageGroup;
+            
+            // Si quieres usar localStorage (funciona en navegadores):
+            // localStorage.setItem('userAge', ageGroup);
+        }
+
+        function getSavedAge() {
+            // Recuperar de la variable global
+            return window.userAge || null;
+            
+            // Si usas localStorage:
+            // return localStorage.getItem('userAge');
+        }
+
+        function restoreSelection(ageGroup) {
+            ageSelected = true;
+            selectedAge = ageGroup;
+            updateInterface(ageGroup);
+            showConfirmation(ageGroup);
+        }
+
+        // Función opcional para resetear la selección (solo para pruebas)
+        function resetSelection() {
+            ageSelected = false;
+            selectedAge = null;
+            window.userAge = null;
+            
+            const option1 = document.getElementById('option1');
+            const option2 = document.getElementById('option2');
+            const confirmationMessage = document.getElementById('confirmationMessage');
+            
+            option1.classList.remove('selected');
+            option2.classList.remove('selected');
+            confirmationMessage.classList.remove('show');
+        }
