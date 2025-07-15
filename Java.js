@@ -222,3 +222,53 @@ document.getElementById('searchInput').addEventListener('blur', function() {
             option2.classList.remove('selected');
             confirmationMessage.classList.remove('show');
         }
+        
+        
+// Manejo del formulario de unite gratis (NO interfiere con comentarios)
+document.addEventListener('DOMContentLoaded', function() {
+    const uniteForm = document.getElementById('uniteForm');
+
+    if (uniteForm) {
+        uniteForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            const nombreCompleto = document.getElementById('nombre completo').value;
+            const email = document.getElementById('mail').value;
+
+            // Validar
+            if (validateUniteForm(nombreCompleto, email)) {
+                alert(`¡Gracias ${nombreCompleto}! Tu solicitud para unirte ha sido enviada.\n\n📧 Email: ${email}\n\nNos pondremos en contacto contigo pronto para darte acceso a nuestra plataforma.`);
+
+                // Limpiar el formulario
+                this.reset();
+            }
+        });
+    }
+});
+
+// Función de validación específica para el formulario Unite (nombre diferente)
+function validateUniteForm(nombreCompleto, email) {
+    if (!nombreCompleto.trim()) {
+        alert('Por favor, ingresa tu nombre completo.');
+        return false;
+    }
+
+    if (!email.trim()) {
+        alert('Por favor, ingresa tu email.');
+        return false;
+    }
+
+    // Validación básica de email
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(email.trim())) {
+        alert('Por favor, ingresa un email válido.');
+        return false;
+    }
+
+    if (nombreCompleto.trim().length < 2) {
+        alert('El nombre completo debe tener al menos 2 caracteres.');
+        return false;
+    }
+
+    return true;
+}
